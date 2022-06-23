@@ -18,7 +18,7 @@ add_library(DemoAIModule SHARED ${SRC_FILES})
 IF (MSVC)
     target_link_libraries(DemoAIModule BWAPILIB libzstd_static)
 ELSE (MSVC)
-    target_link_libraries(DemoAIModule -L/usr/local/Cellar/llvm/8.0.0/lib BWAPILIB libzstd_static c++fs)
+    target_link_libraries(DemoAIModule -L/usr/local/Cellar/llvm/13.0.0_2/lib BWAPILIB libzstd_static)
 ENDIF (MSVC)
 
 target_include_directories(DemoAIModule PUBLIC ${SRC_INCLUDES})

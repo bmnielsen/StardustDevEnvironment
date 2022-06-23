@@ -8662,7 +8662,8 @@ class serializer
             return;
         }
 
-        const bool is_negative = (x <= 0) and (x != 0);  // see issue #755
+        //const bool is_negative = (x <= 0) and (x != 0);  // see issue #755
+        const bool is_negative = (x < 0); // BMN: Patched as clang now warns about the above implementation
         std::size_t i = 0;
 
         while (x != 0)
